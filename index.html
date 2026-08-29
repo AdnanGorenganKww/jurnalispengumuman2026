@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Portal Seleksi Jurnalistik 2026/2027</title>
+  <meta name="description" content="Portal Seleksi Anggota Baru Jurnalistik Sekolah 2026/2027" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ 
+  <!-- ================= BACKGROUND FX (shared, dilihat di semua screen) ================= -->
+  <div class="bg-fx" aria-hidden="true">
+    <div class="bg-glow bg-glow--a"></div>
+    <div class="bg-glow bg-glow--b"></div>
+    <div class="bg-grid"></div>
+    <canvas id="particle-canvas"></canvas>
+  </div>
+ 
+  <!-- ================= SCREEN 0 — OPENING ================= -->
+  <section id="screen-opening" class="screen screen--opening is-active" aria-label="Opening">
+    <div class="opening-inner">
+      <div class="opening-logo-wrap">
+        <img src="assets/logo.png" alt="Logo Jurnalistik Sekolah" class="opening-logo" id="opening-logo" />
+        <div class="opening-logo-ring" aria-hidden="true"></div>
+      </div>
+ 
+      <div class="opening-text">
+        <p class="opening-eyebrow" id="opening-eyebrow">JURNALISTIK SEKOLAH</p>
+        <h1 class="opening-title" id="opening-title">PORTAL SELEKSI<br />ANGGOTA BARU</h1>
+        <p class="opening-year" id="opening-year">2026 / 2027</p>
+      </div>
+ 
+      <div class="opening-loader" aria-hidden="true">
+        <div class="opening-loader-bar" id="opening-loader-bar"></div>
+      </div>
+      <p class="opening-loader-label" id="opening-loader-label">Menyiapkan portal...</p>
+    </div>
+  </section>
+ 
+  <!-- ================= SCREEN 1 — HOME / HERO ================= -->
+  <section id="screen-home" class="screen screen--home" aria-label="Beranda">
+    <header class="navbar">
+      <div class="navbar-brand">
+        <img src="assets/logo.png" alt="Logo Jurnalistik Sekolah" class="navbar-logo" />
+        <div class="navbar-brand-text">
+          <span class="navbar-title">Jurnalistik Sekolah</span>
+          <span class="navbar-subtitle">Portal Seleksi</span>
+        </div>
+      </div>
+      <div class="navbar-tag">Tahun Ajaran 2026/2027</div>
+    </header>
+ 
+    <main class="hero">
+      <p class="hero-eyebrow">Pengumuman Hasil Seleksi</p>
+      <h1 class="hero-title">
+        Penerimaan Anggota Baru<br />
+        <span class="hero-title-accent">Jurnalistik</span>
+      </h1>
+      <p class="hero-year">Tahun 2026/2027</p>
+      <p class="hero-desc">
+        Masukkan username peserta untuk mengetahui hasil seleksi dan informasi
+        penempatan divisi kamu.
+      </p>
+ 
+      <button type="button" id="btn-open-check" class="btn btn--primary btn--lg">
+        <span>Cek Hasil Seleksi</span>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+ 
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-dot hero-meta-dot--green"></span>
+          Hasil bersifat personal & rahasia
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-dot hero-meta-dot--blue"></span>
+          Cukup dengan satu username
+        </div>
+      </div>
+    </main>
+ 
+    <footer class="home-footer">
+      <p>&copy; 2026 Jurnalistik Sekolah. Seluruh hasil seleksi bersifat final.</p>
+    </footer>
+  </section>
+ 
+  <!-- ================= SCREEN 2 — INPUT USERNAME ================= -->
+  <section id="screen-input" class="screen screen--input" aria-label="Cek Hasil Seleksi">
+    <div class="panel panel--input">
+      <button type="button" class="btn-back" id="btn-back-home" aria-label="Kembali ke beranda">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Kembali
+      </button>
+ 
+      <div class="panel-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 12c2.7 0 4.9-2.2 4.9-4.9S14.7 2.2 12 2.2 7.1 4.4 7.1 7.1 9.3 12 12 12Zm0 2.4c-3.6 0-9 1.8-9.2 5.4v1.8h18.4v-1.8c-.2-3.6-5.6-5.4-9.2-5.4Z" fill="currentColor"/></svg>
+      </div>
+ 
+      <h2 class="panel-title">Cek Hasil Seleksi</h2>
+      <p class="panel-desc">
+        Masukkan username peserta yang telah diberikan untuk melihat hasil seleksi.
+      </p>
+ 
+      <form id="form-username" class="form-username" novalidate>
+        <label for="input-username" class="form-label">Username Peserta</label>
+        <div class="input-group" id="input-group">
+          <svg class="input-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M7 9h10M7 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+          <input
+            type="text"
+            id="input-username"
+            name="username"
+            class="input-field"
+            placeholder="Contoh: JRN26-001"
+            autocomplete="off"
+            autocapitalize="characters"
+            spellcheck="false"
+            required
+          />
+        </div>
+        <p class="input-error" id="input-error" role="alert"></p>
+ 
+        <button type="submit" class="btn btn--primary btn--lg btn--block" id="btn-submit-username">
+          <span>Cek Hasil</span>
+        </button>
+      </form>
+    </div>
+  </section>
+ 
+  <!-- ================= SCREEN 3 — LOADING / VERIFICATION ================= -->
+  <section id="screen-loading" class="screen screen--loading" aria-label="Memverifikasi Data">
+    <div class="loading-inner">
+      <div class="loading-spinner" aria-hidden="true">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="42" class="loading-spinner-track"/>
+          <circle cx="50" cy="50" r="42" class="loading-spinner-arc"/>
+        </svg>
+        <span class="loading-percent" id="loading-percent">0%</span>
+      </div>
+ 
+      <h2 class="loading-title">Memverifikasi Data Peserta</h2>
+ 
+      <ul class="loading-steps" id="loading-steps">
+        <li class="loading-step" data-step="0">
+          <span class="loading-step-icon"></span>
+          <span class="loading-step-label">Memeriksa username</span>
+        </li>
+        <li class="loading-step" data-step="1">
+          <span class="loading-step-icon"></span>
+          <span class="loading-step-label">Memverifikasi data peserta</span>
+        </li>
+        <li class="loading-step" data-step="2">
+          <span class="loading-step-icon"></span>
+          <span class="loading-step-label">Memproses hasil seleksi</span>
+        </li>
+        <li class="loading-step" data-step="3">
+          <span class="loading-step-icon"></span>
+          <span class="loading-step-label">Menyiapkan informasi peserta</span>
+        </li>
+      </ul>
+ 
+      <div class="loading-bar-track">
+        <div class="loading-bar-fill" id="loading-bar-fill"></div>
+      </div>
+      <p class="loading-status" id="loading-status">Mohon tunggu sebentar...</p>
+    </div>
+  </section>
+ 
+  <!-- ================= SCREEN 4 — HASIL: LULUS ================= -->
+  <section id="screen-result-pass" class="screen screen--result screen--pass" aria-label="Hasil Seleksi - Lulus">
+    <div class="confetti-layer" id="confetti-layer" aria-hidden="true"></div>
+ 
+    <div class="result-inner">
+      <div class="result-badge result-badge--pass">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+ 
+      <p class="result-eyebrow result-eyebrow--pass" id="pass-eyebrow">SELAMAT!</p>
+      <p class="result-desc">
+        Berdasarkan hasil seleksi penerimaan anggota baru Jurnalistik,
+        Anda dinyatakan:
+      </p>
+      <h2 class="result-status result-status--pass" id="pass-status">LULUS SELEKSI</h2>
+ 
+      <!-- Digital Result Card -->
+      <div class="result-card-wrap" id="pass-card-wrap">
+        <article class="result-card result-card--pass" id="pass-card">
+          <div class="result-card-shine" aria-hidden="true"></div>
+          <header class="result-card-header">
+            <img src="assets/logo.png" alt="Logo Jurnalistik Sekolah" class="result-card-logo" />
+            <div>
+              <p class="result-card-org">Jurnalistik SMAN 3 Banjar</p>
+              <p class="result-card-sub">Seleksi Anggota Baru &middot; 2026/2027</p>
+            </div>
+          </header>
+ 
+          <div class="result-card-body">
+            <div class="result-card-field">
+              <span class="result-card-label">Nama</span>
+              <span class="result-card-value" id="pass-nama">—</span>
+            </div>
+            <div class="result-card-field">
+              <span class="result-card-label">Username</span>
+              <span class="result-card-value" id="pass-username">—</span>
+            </div>
+            <div class="result-card-field">
+              <span class="result-card-label">Status</span>
+              <span class="result-card-value result-card-value--pass" id="pass-status-value">LULUS</span>
+            </div>
+            <div class="result-card-field">
+              <span class="result-card-label">Divisi</span>
+              <span class="result-card-value" id="pass-divisi">—</span>
+            </div>
+            <div class="result-card-field">
+              <span class="result-card-label">Tahun Seleksi</span>
+              <span class="result-card-value">2026/2027</span>
+            </div>
+          </div>
+        </article>
+      </div>
+ 
+      <button type="button" class="btn btn--primary btn--lg" id="btn-continue">
+        <span>Lanjutkan</span>
+        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button type="button" class="btn btn--ghost" id="btn-pass-back">Cek username lain</button>
+    </div>
+  </section>
+ 
+  <!-- ================= SCREEN 5 — HASIL: TIDAK LULUS ================= -->
+  <section id="screen-result-fail" class="screen screen--result screen--fail" aria-label="Hasil Seleksi - Belum Lulus">
+    <div class="result-inner">
+      <div class="result-badge result-badge--fail">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+ 
+      <p class="result-eyebrow result-eyebrow--fail">MOHON MAAF</p>
+      <p class="result-desc">
+        Berdasarkan hasil seleksi penerimaan anggota baru Jurnalistik,
+        Anda dinyatakan:
+      </p>
+      <h2 class="result-status result-status--fail"> TIDAK LULUS SELEKSI</h2>
+ 
+      <div class="result-card-wrap">
+        <article class="result-card result-card--fail" id="fail-card">
+          <header class="result-card-header">
+            <img src="assets/logo.png" alt="Logo Jurnalistik Sekolah" class="result-card-logo" />
+            <div>
+              <p class="result-card-org">Jurnalistik SMAN 3 Banjar</p>
+              <p class="result-card-sub">Seleksi Anggota Baru &middot; 2026/2027</p>
+            </div>
+          </header>
+ 
+          <div class="result-card-body">
+            <div class="result-card-field">
+              <span class="result-card-label">Nama</span>
+              <span class="result-card-value" id="fail-nama">—</span>
+            </div>
+            <div class="result-card-field">
+              <span class="result-card-label">Username</span>
+              <span class="result-card-value" id="fail-username">—</span>
+            </div>
+            <div class="result-card-field">
+              <span class="result-card-label">Status</span>
+              <span class="result-card-value result-card-value--fail">TIDAK LULUS</span>
+            </div>
+          </div>
+        </article>
+      </div>
+ 
+      <p class="result-message">
+        Terima kasih telah mengikuti proses seleksi. Tetap semangat untuk terus
+        berkembang dan mencoba kesempatan lainnya.
+      </p>
+ 
+      <button type="button" class="btn btn--secondary btn--lg" id="btn-fail-back">
+        <span>Kembali ke Beranda</span>
+      </button>
+    </div>
+  </section>
+ 
+  <!-- ================= SCREEN 6 — WELCOME / TAHAP SETELAH KELULUSAN ================= -->
+  <section id="screen-welcome" class="screen screen--welcome" aria-label="Selamat Datang di Jurnalistik">
+    <div class="welcome-inner">
+      <p class="welcome-eyebrow">Langkah Selanjutnya</p>
+      <h2 class="welcome-title">Selamat Datang di Jurnalistik</h2>
+      <p class="welcome-desc">
+        Seleksi bukan akhir, melainkan awal dari perjalananmu di Jurnalistik
+        Sekolah. Berikut tahapan yang akan kamu lalui sebagai anggota baru.
+      </p>
+ 
+      <ol class="welcome-steps">
+        <li class="welcome-step">
+          <span class="welcome-step-num">01</span>
+          <div class="welcome-step-body">
+            <h3>Pengenalan</h3>
+            <p>Mengenal lingkungan dan anggota Jurnalistik.</p>
+          </div>
+        </li>
+        <li class="welcome-step">
+          <span class="welcome-step-num">02</span>
+          <div class="welcome-step-body">
+            <h3>Pelatihan</h3>
+            <p>Mempelajari dasar-dasar jurnalistik.</p>
+          </div>
+        </li>
+        <li class="welcome-step">
+          <span class="welcome-step-num">03</span>
+          <div class="welcome-step-body">
+            <h3>Praktik</h3>
+            <p>Mulai melakukan dokumentasi, wawancara, penulisan, dan kegiatan lainnya.</p>
+          </div>
+        </li>
+        <li class="welcome-step">
+          <span class="welcome-step-num">04</span>
+          <div class="welcome-step-body">
+            <h3>Bergabung</h3>
+            <p>Resmi menjadi bagian dari Jurnalistik.</p>
+          </div>
+        </li>
+      </ol>
+ 
+      <button type="button" class="btn btn--primary btn--lg" id="btn-welcome-home">
+        <span>Kembali ke Beranda</span>
+      </button>
+    </div>
+  </section>
+ 
+  <script src="script.js"></script>
+</body>
+</html>
+ 
