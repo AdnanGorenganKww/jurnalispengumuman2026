@@ -28,10 +28,6 @@
     { username: 'JRN26-012', nama: 'Witrin Nazwa Saqinah', status: 'lulus', divisi: 'Videografi' },
     { username: 'JRN26-013', nama: 'GokGok', status: 'lulus', divisi: 'Tytyd' }
   ];
-   
-  ];
-
-
   /* ========================================================================
      2. UTILITAS UMUM
      ======================================================================== */
