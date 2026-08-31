@@ -27,7 +27,9 @@
     { username: 'JRN26-013', nama: 'Nayla Keysheva Adhi', status: 'lulus', divisi: 'Desain Grafis' },
     { username: 'JRN26-014', nama: 'Amelia Wahyudiani', status: 'lulus', divisi: 'Fotografi' },
     { username: 'JRN26-015', nama: 'Syifa Alma Ghaitsa', status: 'lulus', divisi: 'Desain Grafis' },
-    { username: 'JRN26-016', nama: 'Rifki Galih Permana', status: 'tidak lulus', divisi: '-' }
+    { username: 'JRN26-016', nama: 'Rifki Galih Permana', status: 'tidak lulus', divisi: '-' },
+    // --- ESTER EGG ---
+    { username: 'HANIP', nama: 'HANIP', status: 'lulus', divisi: 'HANIP' }
   ];
    
   /* ========================================================================
