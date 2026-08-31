@@ -10,7 +10,7 @@
      Pastikan setiap baris data (kecuali yang paling akhir) diakhiri 
      dengan tanda koma ( , ). Jika lupa koma, web akan error/blank!
      ======================================================================== */
-  const peserta = [
+    const peserta = [
     { username: 'JRN26-001', nama: 'Kiki Yuliani', status: 'lulus', divisi: 'Videografi' },
     { username: 'JRN26-002', nama: 'Fadhil Luqmanul Hakim', status: 'lulus', divisi: 'Videografi' },
     { username: 'JRN26-003', nama: 'Keiko Nairuza Chaerani', status: 'lulus', divisi: 'Desain Grafis' },
@@ -22,11 +22,12 @@
     { username: 'JRN26-009', nama: 'Rangga Putra Pratama', status: 'lulus', divisi: 'Videografi' },
     { username: 'JRN26-010', nama: 'Zahira Ramadhania', status: 'lulus', divisi: 'Artikel' },
     { username: 'JRN26-011', nama: 'Nury Damira Rahanayu', status: 'lulus', divisi: 'Kreatif - PJ Editing' },
+    // --- DATA TAMBAHAN BARU ---
     { username: 'JRN26-012', nama: 'Witrin Nazwa Saqinah', status: 'lulus', divisi: 'Videografi' },
-    
-    // CONTOH CARA MENAMBAH DATA BARU (Ganti dengan data aslinya):
-    { username: 'JRN26-013', nama: 'Adnan Sya\'ban', status: 'lulus', divisi: 'Artikel' },
-    { username: 'JRN26-014', nama: 'Nama Peserta Lain', status: 'tidak lulus', divisi: 'Fotografi' }
+    { username: 'JRN26-013', nama: 'Nayla Keysheva Adhi', status: 'lulus', divisi: 'Desain Grafis' },
+    { username: 'JRN26-014', nama: 'Amelia Wahyudiani', status: 'lulus', divisi: 'Fotografi' },
+    { username: 'JRN26-015', nama: 'Syifa Alma Ghaitsa', status: 'lulus', divisi: 'Desain Grafis' },
+    { username: 'JRN26-016', nama: 'Rifki Galih Permana', status: 'tidak lulus', divisi: '-' }
   ];
    
   /* ========================================================================
