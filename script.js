@@ -29,7 +29,7 @@
     { username: 'JRN26-015', nama: 'Syifa Alma Ghaitsa', status: 'lulus', divisi: 'Desain Grafis' },
     { username: 'JRN26-016', nama: 'Rifki Galih Permana', status: 'tidak lulus', divisi: '-' },
     // --- ESTER EGG ---
-    { username: 'HANIP-001', nama: 'HANIP', status: 'lulus', divisi: 'HANIP' }
+    { username: 'JRN26-999', nama: 'HANIP', status: 'lulus', divisi: 'HANIP' }
   ];
    
   /* ========================================================================
