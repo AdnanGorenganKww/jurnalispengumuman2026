@@ -26,8 +26,9 @@
     { username: 'JRN26-010', nama: 'Zahira Ramadhania', status: 'lulus', divisi: 'Artikel' },
     { username: 'JRN26-011', nama: 'Nury Damira Rahanayu', status: 'lulus', divisi: 'Kreatif - PJ Editing' },
     { username: 'JRN26-012', nama: 'Witrin Nazwa Saqinah', status: 'lulus', divisi: 'Videografi' },
-    { username: 'JRN26-013', nama: 'GokGok', status: 'lulus', divisi: 'Tytyd' }
+    { username: 'JRN26-013', nama: 'GokGok', status: 'lulus', divisi: 'Videografi' }
   ];
+   
   /* ========================================================================
      2. UTILITAS UMUM
      ======================================================================== */
